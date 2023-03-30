@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/dayjs"></script>
+    <script src="../dist/dayjs-plugin-duration.min.js"></script>
+    <script>
+        (function() {
+            dayjs.extend(dayjsPluginDuration.default)
+            var x = dayjs()
+            var y = dayjs('2022-02-20')
+
+            var duration1 = dayjs.duration(x.diff(y)).format("YYYY-MM-DD")
+            console.log(duration1)
+            
+        })()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
